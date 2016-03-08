@@ -220,8 +220,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['compile-sass', 'bower-install', 'connect:app', 'watch']);
     grunt.registerTask('validate-js', ['jshint']);
     grunt.registerTask('server-dist', ['connect:dist']);
-    //grunt.registerTask('publish', ['compile-sass', 'clean', 'imagemin:dist', 'grunticon:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'concat', 'cssmin', 'uglify', 'usemin', 'uncss', 'cssmin:dist', 'minifyHtml:dist']);
-    grunt.registerTask('publish', ['compile-sass', 'clean', 'imagemin:dist', 'grunticon:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'concat', 'usemin', 'uncss', 'minifyHtml:dist']);
+    grunt.registerTask('publish', ['compile-sass', 'clean', 'imagemin:dist', 'grunticon:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'concat', 'cssmin', 'uglify', 'usemin', 'uncss', 'cssmin:dist', 'minifyHtml:dist']);
     //grunt.registerTask('publish', ['compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
     grunt.registerTask('grunt-grunticon', ['grunticon']);
     grunt.loadNpmTasks('grunt-contrib-imagemin');
