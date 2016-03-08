@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1600"
+   height="1600"
+   viewBox="0 0 1600 1600"
+   id="svg4156"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   inkscape:export-filename="C:\Users\Asko\PhpstormProjects\foundation\app\images\achim-galeski_logo_outlined_128.png"
+   inkscape:export-xdpi="720"
+   inkscape:export-ydpi="720"
+   sodipodi:docname="achim-galeski_logo.svg">
+  <title
+     id="title4723">Achim Galeski Logo outlined</title>
+  <defs
+     id="defs4158">
+    <inkscape:path-effect
+       effect="sketch"
+       id="path-effect5731"
+       is_visible="true"
+       nbiter_approxstrokes="5"
+       strokelength="100"
+       strokelength_rdm="0.3;1"
+       strokeoverlap="0.3"
+       strokeoverlap_rdm="0.3;1"
+       ends_tolerance="0.1;1"
+       parallel_offset="5;1"
+       tremble_size="5;1"
+       tremble_frequency="1"
+       nbtangents="5"
+       tgt_places_rdmness="1;1"
+       tgtscale="10"
+       tgtlength="100"
+       tgtlength_rdm="0.3;1" />
+    <linearGradient
+       id="linearGradient5640"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop5642" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5632"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop5634" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4146"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop4148" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#000000"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.05"
+     inkscape:cx="382.17136"
+     inkscape:cy="721.4027"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1137"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="false"
+     showguides="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4704" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4161">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Achim Galeski Logo outlined</dc:title>
+        <dc:date>16.02.2016</dc:date>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Achim Galeski</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:description>Logo erstellt und genutzt von Achim Galeski als eigene Marke.</dc:description>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Hintergrund"
+     style="display:inline"
+     transform="translate(0,1584)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.19998448;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-rule:nonzero"
+       id="rect4717"
+       width="1600"
+       height="1600"
+       x="0"
+       y="-1584"
+       ry="300" />
+  </g>
+  <g
+     inkscape:label="AchimGaleski_Logo"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,547.6378)"
+     style="display:inline">
+    <path
+       style="fill:#008b8b;fill-opacity:1;stroke:none;stroke-width:50;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 498.51916,-447.63235 c -7.0123,5.65173 -6.75366,15.74406 -11.56286,22.93553 -25.26155,61.33819 -43.76743,125.3598 -69.16046,186.70334 C 311.38705,50.938942 202.11642,338.8717 100.1314,629.39176 c -1.540715,13.79827 10.8439,23.1421 17.43522,33.74795 95.21807,128.15751 228.53972,228.29187 379.4801,280.21174 21.04445,-47.58343 66.36185,-84.2566 118.0809,-91.87811 60.06994,-11.95272 121.75274,-1.73356 182.11459,-9.02039 41.88401,-2.69677 85.62115,-7.99816 126.21086,5.91571 40.95936,16.35689 69.42635,58.67412 70.26923,102.73773 0.006,3.55965 5.72544,-1.63516 8.0848,-1.09521 65.1324,-19.40733 124.3503,-57.43163 192.3998,-67.06705 38.4992,-0.35662 75.9331,10.57342 114.2455,12.6775 63.8222,8.31381 127.1626,19.71415 191.5195,21.88911 0.9914,-52.52636 -24.479,-99.96961 -38.7741,-149.36073 -57.8313,-180.03304 -120.1425,-358.66606 -185.7694,-535.86776 -0.5217,-4.05957 -3.5747,-9.61328 -8.3411,-6.38173 -98.2503,12.41443 -197.4073,0.12771 -294.70168,-14.20828 -2.5436,0.76991 -8.86267,-3.19209 -7.51709,1.76056 1.23656,93.13419 16.20886,185.36258 30.39133,277.28499 -1.05197,26.42403 -24.8844,47.3389 -50.01456,50.87686 -61.29903,19.14754 -126.99691,33.2988 -191.03888,20.18503 C 620.42346,536.65947 508.34712,421.07374 488.88548,285.7132 471.44109,160.22564 544.0995,27.985137 659.21228,-24.281947 c 90.07427,-42.127404 196.23324,-42.621728 289.37181,-10.155281 49.52217,16.142664 93.27261,45.703142 141.97661,63.515326 20.3815,5.054633 39.7634,-5.541687 55.583,-17.251712 10.799,-7.8642379 21.3324,-16.7812581 29.18,-27.58884 -0.09,-11.253313 -9.2454,-19.535203 -12.0013,-30.084502 -60.5451,-132.072524 -116.2684,-266.618734 -185.11635,-394.647554 -10.43885,-8.41512 -24.59087,-2.79318 -36.47642,-1.98747 -68.93703,9.66338 -138.58664,16.047 -208.25196,13.82945 -44.05312,-1.2562 -87.74699,-7.25841 -131.41521,-12.70991 -34.39878,-3.59424 -68.94519,-6.4163 -103.5433,-6.26991 z"
+       id="Auswahl"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+{
+  "name": "zf6_project",
+  "private": true,
+  "dependencies": {
+    "foundation-sites": "~6.*",
+    "font-awesome": "~4.*"
+  },
+  "devDependencies": {
+    "Font-Awesome-SVG-PNG": "font-awesome-svg-png#^1.*"
+  }
+}
