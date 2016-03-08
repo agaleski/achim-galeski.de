@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@bitbucket.org:AchimGaleski/achim-galeski.de.git"
   },
   "private": true,
   "devDependencies": {
