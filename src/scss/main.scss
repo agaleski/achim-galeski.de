@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+/*
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+$blue: #06bcef;
+// Add pink and its invert
+$pink: #ff8080;
+$pink-invert: #fff;
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $pink;
+$primary-invert: $pink-invert;
+
+// 4. Import the rest of Bulma
+*/
+
+@import "../../node_modules/bulma/bulma";
+//@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+html, body {
+  scroll-behavior: smooth;
+}
+html {
+  background-color: #ccc;
+}
+body {
+  background-color: #fff;
+  max-width: 960px;
+  margin: 1rem auto;
+  box-shadow: 1px 1px 10px 1px #333;
+}
+nav.navbar {
+  position: sticky;
+  top: 0;
+  padding: 0 1rem;
+}
+section {
+  &#hero {
+    background-image: url("https://cdn.pixabay.com/photo/2016/05/24/16/48/mountains-1412683_1280.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: calc(100vh - 3rem);
+    h1, h2, strong {
+      color: #000;
+    }
+    .hero-body {
+      backdrop-filter: hue-rotate(200deg) saturate(1.5);
+      .container {
+        margin-top: calc(50vh - 9rem);
+      }
+    }
+  }
+  &#recommendations {
+    .card {
+      text-align: justify;
+    }
+  }
+  &#social {
+    background: url("https://cdn.pixabay.com/photo/2019/03/12/19/33/network-4051664_1280.jpg") no-repeat fixed center center;
+    background-size: cover;
+  }
+  h2.title {
+    text-align: center;
+  }
+}
+.is-ag-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+.quote {
+  font-weight: bold;
+  padding: 1em;
+  position: relative;
+  quotes: '\201c' '\201d';
+  &:before {
+    content: open-quote;
+    font-size: 4em;
+    position: absolute;
+    top: -0.3em;
+    right: 100%;
+    margin-right: -1rem;
+  }
+  &:after {
+    content: close-quote;
+    font-size: 4em;
+    position: absolute;
+    left: 100%;
+    margin-left: -1rem;
+  }
+}
+footer.footer {
+  background-color: #333;
+  color: #ccc;
+  p {
+    padding-bottom: 1rem;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
