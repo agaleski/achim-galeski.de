@@ -6,30 +6,77 @@
     <title>Achim Galeski | achim-galeski.de</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .main-container {
+            position: relative;
+        }
         img.profil {
             border-radius: 50%;
             border: .5rem solid rgba(255,255,255,.3);
             width: 100%;
         }
         nav {
-            background-color: #006666;
+            position: fixed;
+            top: 0;
         }
-        main {
-            background-color: #333;
+        .main-container main {
+            margin-top: 5rem;
+            padding-top: 1rem;
+        }
+        nav .container {
+            padding: .5rem 1rem;
+        }
+        .navbar {
+            background-color: #066;
+        }
+        .navbar-collapse {
+            padding-top: 1rem;
+        }
+        @media (min-width: 992px) {
+            img.profil {
+                width: calc(100% - 1rem);
+                margin: 0 1rem;
+            }
+            nav .container {
+                padding: 0;
+            }
+            .navbar-expand-lg {
+                flex-wrap: wrap;
+            }
+            .navbar-expand-lg .navbar-nav {
+                flex-direction: column;
+                width: 100%;
+            }
+            .navbar-nav .nav-item .nav-link {
+                padding-left: 2rem;
+            }
+            .navbar-nav .nav-link:hover {
+                background-color: rgba(255,255,255,.3);
+            }
+            .navbar {
+                height: 100%;
+                width: 25%;
+            }
+            .main-container main {
+                margin-top: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid main-container">
         <div class="row">
             <div class="col-lg-3">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
+                <nav id="nav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+                    <div class="container">
                         <a class="navbar-brand" href="#">
                             <img class="profil d-none d-lg-block"
                                  src="img/achim-galeski_profil.png"
                                  alt="Achim Galeski Profil"
                             >
+                            <span class="d-lg-none">Achim Galeski</span>
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -51,7 +98,62 @@
                 </nav>
             </div>
             <main class="col">
-                <img class="profil d-block d-lg-none" src="img/achim-galeski_profil.png" alt="Achim Galeski Profil">
+                <div class="container">
+
+                    <img class="profil d-block d-lg-none" src="img/achim-galeski_profil.png" alt="Achim Galeski Profil">
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                    <p>asdf</p>
+                </div>
             </main>
         </div>
     </div>
