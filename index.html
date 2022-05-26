@@ -8,9 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;800&display=swap" rel="stylesheet">
     <style>
-        .text-primary {
-            color: #066 !important;
-        }
         body {
             scroll-behavior: smooth;
             font-family: 'Saira Extra Condensed', sans-serif;
@@ -47,8 +44,11 @@
             min-height: 100vh;
         }
         h1 {
-            font-size: 5rem;
+            font-size: 3.5rem;
             font-weight: 800;
+        }
+        .text-primary {
+            color: #066 !important;
         }
         .social-icons a {
             width: 3rem;
@@ -64,6 +64,11 @@
             max-height: 2rem;
             max-width: 2rem;
             color: #fff;
+        }
+        @media (min-width: 400px) {
+            h1 {
+                font-size: 4.5rem;
+            }
         }
         @media (min-width: 992px) {
             img.profil {
@@ -99,6 +104,9 @@
             }
             main > .container {
                 margin-left: 0;
+            }
+            h1 {
+                font-size: 5rem;
             }
         }
     </style>
