@@ -110,31 +110,49 @@
         }
     </style>
     <script>
+        const translations = {
+            'en': {
+                'years':  [ ' Year ', ' Years ' ],
+                'months': [ ' Month', ' Months' ]
+            },
+            'de': {
+                'years':  [ 'Jahr ', ' Jahre ' ],
+                'months': [ 'Monat', ' Monate' ]
+            }
+        }
+
+        /**
+         * Takes given start and end date-strings and calculates the time difference in
+         * year(s) and month(s).
+         *
+         * @param startDate
+         * @param endDate
+         * @param lang
+         *
+         * @returns {string}
+         */
         const getTimeDifference = (startDate, endDate, lang = 'en') => {
             startDate = new Date(startDate);
             endDate   = endDate ? new Date(endDate) : new Date();
 
             let years   = endDate.getFullYear() - startDate.getFullYear(),
                 months  = (endDate.getMonth() - startDate.getMonth() + 12 * years) % 12,
-                result  = '',
-                strings = {
-                    'en': {
-                        'years':  [ ' Year ', ' Years ' ],
-                        'months': [ ' Month', ' Months' ]
-                    },
-                    'de': {
-                        'years':  [ 'Jahr ', ' Jahre ' ],
-                        'months': [ 'Monat', ' Monate' ]
-                    }
-                }
+                result  = ''
             ;
 
-            result += years > 0 ? years + strings[lang].years[Number(years > 1)] : '';
-            result += months > 0 ? months + strings[lang].months[Number(months > 1)] : '';
+            months  = endDate.getDate() > 14 ? months + 1 : months;
+            result += years > 0 ? years + translations[lang].years[Number(years > 1)] : '';
+            result += months > 0 ? months + translations[lang].months[Number(months > 1)] : '';
 
             return result;
         }
 
+        /**
+         * Iterates through all ".date" class elements, greps date strings from data attributes
+         * and sets time-string text content of each element.
+         *
+         * @returns {void}
+         */
         const setTimeStrings = () => {
             const elements = document.getElementsByClassName('date');
 
@@ -168,7 +186,7 @@
                         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#about">About</a>
+                                    <a class="nav-link active" aria-current="page" href="#">About</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#recommendations">Recommendations</a>
@@ -216,9 +234,10 @@
                 </article>
                 <article id="recommendations" class="d-flex align-items-center">
                     <div>
-                        InvincibleBrands
-                        <p class="date" data-start="2021-1-1"></p>
-                        <p class="date" data-start="2021-1-1" data-end="2022-1-1"></p>
+                        <h2 class="mb-0">InvincibleBrands</h2>
+                        <p class="text-muted date" data-start="2017-3-1"></p>
+                        <h2 class="mb-0">eKomi - The Feedback Company</h2>
+                        <p class="text-muted date" data-start="2012-2-1" data-end="2017-2-28"></p>
                     </div>
                 </article>
                 <article id="experience" class="d-flex align-items-center">
