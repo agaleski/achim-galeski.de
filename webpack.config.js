@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
@@ -28,6 +29,7 @@ module.exports = {
           },
         ],
       },
+      /*
       {
         test: /\.woff2$/i,
         loader: 'url-loader',
@@ -35,6 +37,7 @@ module.exports = {
           name: 'assets/fonts/[name].[ext]'
         }
       },
+      */
     ],
   },
   optimization: {
@@ -49,9 +52,20 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: 'src/index.html', to: "index.html" },
         { from: 'src/favicon.ico', to: "favicon.ico" },
         { from: 'src/assets', to: "assets" },
+      ],
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      hash: true,
+      template: 'src/index.html',
+      minify: true,
+      links: [
+        'style.css',
+      ],
+      scripts: [
+        'index.js',
       ],
     }),
   ],
