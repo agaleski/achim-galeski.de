@@ -1,0 +1,27 @@
+{
+  "name": "achim-galeski_de",
+  "version": "1.0.0",
+  "description": "Achim Galeski - Online Curriculum Vitae",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "Achim Galeski | achim.galeski@gmail.com",
+  "license": "UNLISENCED",
+  "devDependencies": {
+    "bootstrap": "^5.1.3",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  }
+}
