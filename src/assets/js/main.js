@@ -1,6 +1,6 @@
-import 'bootstrap/js/dist/collapse';
-import './style.css';
-
+/*
+ * Custom JavaScript with functions for this project.
+ */
 
 const translations = {
     'en': {

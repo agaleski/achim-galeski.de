@@ -6,10 +6,11 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: './src/app.js',
   output: {
-    filename: 'index.js',
+    filename: 'assets/js/bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
   devtool: 'source-map',
   devServer: {
@@ -29,15 +30,6 @@ module.exports = {
           },
         ],
       },
-      /*
-      {
-        test: /\.woff2$/i,
-        loader: 'url-loader',
-        options: {
-          name: 'assets/fonts/[name].[ext]'
-        }
-      },
-      */
     ],
   },
   optimization: {
@@ -48,24 +40,25 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: 'assets/css/style.min.css',
     }),
     new CopyPlugin({
       patterns: [
         { from: 'src/favicon.ico', to: "favicon.ico" },
-        { from: 'src/assets', to: "assets" },
+        { from: 'src/assets/fonts', to: "assets/fonts" },
+        { from: 'src/assets/img', to: "assets/img" },
       ],
     }),
     new HtmlWebpackPlugin({
       inject: true,
       hash: true,
-      template: 'src/index.html',
       minify: true,
+      template: 'src/index.html',
       links: [
-        'style.css',
+        'assets/css/style.min.css',
       ],
       scripts: [
-        'index.js',
+        'assets/js/bundle.js',
       ],
     }),
   ],
