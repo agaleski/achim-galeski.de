@@ -1341,10 +1341,10 @@
 
 /***/ }),
 
-/***/ "./src/assets/css/style.css":
-/*!**********************************!*\
-  !*** ./src/assets/css/style.css ***!
-  \**********************************/
+/***/ "./src/assets/scss/style.scss":
+/*!************************************!*\
+  !*** ./src/assets/scss/style.scss ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1528,7 +1528,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _assets_js_main_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/js/main.js */ "./src/assets/js/main.js");
 /* harmony import */ var _assets_js_main_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_js_main_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/css/style.css */ "./src/assets/css/style.css");
+/* harmony import */ var _assets_scss_style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/scss/style.scss */ "./src/assets/scss/style.scss");
 
 
 

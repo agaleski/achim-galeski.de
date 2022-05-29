@@ -19,7 +19,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
+        test: /\.scss$/i,
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -28,6 +28,7 @@ module.exports = {
               url: false,
             }
           },
+          'sass-loader'
         ],
       },
     ],
@@ -54,12 +55,6 @@ module.exports = {
       hash: true,
       minify: true,
       template: 'src/index.html',
-      links: [
-        'assets/css/style.min.css',
-      ],
-      scripts: [
-        'assets/js/bundle.js',
-      ],
     }),
   ],
 };
