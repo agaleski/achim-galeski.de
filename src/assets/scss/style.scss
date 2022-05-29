@@ -38,6 +38,9 @@ nav {
     position: fixed;
     top: 0;
 }
+.navbar-collapse {
+    transition: height .3s ease-in-out;
+}
 nav .container {
     padding: .5rem 1rem;
 }

@@ -15,7 +15,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-  //devtool: 'source-map',
   devServer: {
     static: './dist',
   },
@@ -48,7 +47,7 @@ module.exports = {
       filename: 'assets/css/style.min.css',
     }),
     new PurgeCSSPlugin({
-      paths: glob.sync(path.resolve(__dirname, 'src') + `/**/*`,  { nodir: true }),
+      paths: glob.sync(path.resolve(__dirname, 'src') + `/**/*`, { nodir: true }),
     }),
     new CopyPlugin({
       patterns: [
