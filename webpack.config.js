@@ -1,19 +1,21 @@
 const path = require('path');
+const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const PurgeCSSPlugin = require('purgecss-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/app.js',
   output: {
     filename: 'assets/js/bundle.min.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-  devtool: 'source-map',
+  //devtool: 'source-map',
   devServer: {
     static: './dist',
   },
@@ -44,6 +46,9 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'assets/css/style.min.css',
+    }),
+    new PurgeCSSPlugin({
+      paths: glob.sync(path.resolve(__dirname, 'src') + `/**/*`,  { nodir: true }),
     }),
     new CopyPlugin({
       patterns: [

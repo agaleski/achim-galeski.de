@@ -1,4 +1,4 @@
-@import "~bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 @font-face {
     font-family: 'Saira Extra Condensed';
@@ -30,6 +30,7 @@ img.profil {
     border-radius: 50%;
     border: .5rem solid rgba(255,255,255,.3);
     width: 100%;
+    height: auto;
     max-width: 25rem;
     margin: 0 auto;
 }
