@@ -38,9 +38,6 @@ nav {
     position: fixed;
     top: 0;
 }
-.navbar-collapse {
-    transition: height .3s ease-in-out;
-}
 nav .container {
     padding: .5rem 1rem;
 }
@@ -48,6 +45,7 @@ nav .container {
     background-color: #066;
 }
 .navbar-collapse {
+    transition: height .3s ease-in-out;
     padding-top: 1rem;
 }
 .main-container main {
