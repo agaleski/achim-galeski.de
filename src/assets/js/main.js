@@ -71,12 +71,14 @@ const getTimeDifference = (start, end = null, showDates = false, lang = 'en') =>
  */
 const setTimeStrings = () => {
     const elements = document.getElementsByClassName('date');
+    const language = document.getElementsByTagName('html')[0].getAttribute('lang');
 
     for (let i = 0; i < elements.length; i++) {
         elements[i].innerHTML = getTimeDifference(
             elements[i].getAttribute('data-start'),
             elements[i].getAttribute('data-end'),
-            elements[i].getAttribute('data-show')
+            elements[i].getAttribute('data-show'),
+            language
         );
     }
 }
