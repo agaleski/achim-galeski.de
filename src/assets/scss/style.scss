@@ -24,6 +24,7 @@ body {
     font-family: 'Saira Extra Condensed', sans-serif;
     font-weight: normal;
     font-size: 1.4rem;
+    display: flex;
 }
 h1 {
     font-size: 3.5rem;
@@ -36,12 +37,10 @@ h1 {
 h2 {
     color: $primary;
     font-weight: bold;
+    margin-bottom: 3rem;
 }
 h1, h2 {
     text-transform: uppercase;
-}
-.main-container {
-    position: relative;
 }
 img.profil {
     border-radius: 50%;
@@ -52,21 +51,32 @@ img.profil {
     margin: 0 auto;
 }
 nav {
-    position: fixed;
     top: 0;
+    background-color: $primary;
+    &.navbar {
+        position: fixed;
+        width: 100%;
+    }
     .container {
         padding: .5rem 1rem;
     }
-}
-.navbar {
-    background-color: $primary;
 }
 .navbar-collapse {
     transition: height .3s ease-in-out;
     padding-top: 1rem;
 }
-main article {
-    padding: 4.5rem 0 0;
+.navbar-brand {
+    img.profil {
+        display: none;
+    }
+}
+main {
+    padding: 0 1rem;
+    article {
+        padding: 4.5rem 0 0;
+        display: flex;
+        align-items: center;
+    }
 }
 .social-icons {
     a {
@@ -83,6 +93,11 @@ main article {
             max-width: 2rem;
             color: #fff;
         }
+    }
+}
+#about {
+    img.profil {
+        display: block;
     }
 }
 #recommendations {
@@ -148,47 +163,53 @@ main article {
     }
 }
 @media (min-width: 992px) {
-    img.profil {
-        width: 90%;
+    h1 {
+        font-size: 5rem;
     }
-    nav .container {
-        padding: 0;
-    }
-    .navbar-expand-lg {
-        flex-wrap: wrap;
-    }
-    .navbar-expand-lg .navbar-nav {
-        flex-direction: column;
-        width: 100%;
-    }
-    .navbar-nav .nav-item .nav-link {
-        text-align: center;
-    }
-    .navbar-nav .nav-link:hover {
-        background-color: rgba(255,255,255,.3);
-    }
-    .navbar {
-        height: 100%;
+    #sidebar {
         width: 25%;
         max-width: 28rem;
+    }
+    nav {
+        &.navbar {
+            height: 100%;
+            width: 25%;
+            max-width: 28rem;
+            flex-wrap: wrap;
+            .navbar-nav {
+                flex-direction: column;
+                width: 100%;
+                .nav-link {
+                    text-align: center;
+                    &:hover {
+                        background-color: rgba(255,255,255,.3);
+                    }
+                }
+            }
+        }
+        .container {
+            padding: 0;
+        }
     }
     .navbar-brand {
         width: 100%;
         margin: 0;
-    }
-    .main-container {
-        main {
-            padding: 0 2rem;
-            max-width: 60rem;
-            article {
-                min-height: 100vh;
-            }
-        }
-        & > .row > .col-lg-3 {
-            max-width: 28rem;
+        img.profil {
+            width: 90%;
+            display: block;
         }
     }
-    h1 {
-        font-size: 5rem;
+    main {
+        padding: 0 2rem;
+        width: 75%;
+        max-width: 60rem;
+        article {
+            min-height: 100vh;
+        }
+    }
+    #about {
+        img.profil {
+            display: none;
+        }
     }
 }
