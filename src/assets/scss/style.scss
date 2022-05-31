@@ -148,9 +148,16 @@ main {
     }
     h3 {
         font-weight: bold;
+        margin-top: 3rem;
+        &:first-child {
+            margin-top: 0;
+        }
     }
     h4 {
         color: $primary;
+    }
+    h3, h4 {
+        margin-bottom: 0;
     }
     & .description {
         margin-bottom: 0;
@@ -169,7 +176,7 @@ footer {
     h1 {
         font-size: 5rem;
     }
-    #sidebar {
+    aside {
         width: 25%;
         max-width: 28rem;
     }
