@@ -1,4 +1,4 @@
-@import "bootstrap/scss/bootstrap";
+//@import "bootstrap/scss/bootstrap";
 
 @font-face {
     font-family: 'Saira Extra Condensed';
@@ -50,6 +50,7 @@ img.profil {
     max-width: 25rem;
     margin: 0 auto;
 }
+/*
 nav {
     top: 0;
     background-color: $primary;
@@ -68,6 +69,37 @@ nav {
 .navbar-brand {
     img.profil {
         display: none;
+    }
+}
+ */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: #066;
+    > a {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        display: inline-block;
+        padding: 1rem;
+        border: 1px solid #fff;
+        color: #fff;
+        &:focus ~ aside,
+        &:active ~ aside {
+            right: 0;
+        }
+    }
+    aside {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -80vw;
+        height: 100vh;
+        width: 80vw;
+        background-color: $primary;
+        transition: right .3s ease-in-out;
     }
 }
 main {
@@ -102,20 +134,20 @@ main {
 }
 #recommendations {
     figure {
-        @extend .col-lg-10;
-        @extend .offset-lg-1;
+        //@extend .col-lg-10;
+        //@extend .offset-lg-1;
         text-align: center;
         margin-bottom: 3rem;
         &:last-child {
             margin-bottom: 0;
         }
         blockquote {
-            @extend .blockquote;
+            //@extend .blockquote;
             font-style: italic;
             line-height: 1.1rem;
         }
         figcaption {
-            @extend .blockquote-footer;
+            //@extend .blockquote-footer;
             line-height: 1.3rem;
             padding-top: .3rem;
         }
@@ -176,6 +208,7 @@ footer {
     h1 {
         font-size: 5rem;
     }
+    /*
     aside {
         width: 25%;
         max-width: 28rem;
@@ -207,6 +240,22 @@ footer {
         img.profil {
             width: 90%;
             display: block;
+        }
+    }
+     */
+    nav {
+        position: relative;
+        height: 100%;
+        width: 25%;
+        max-width: 60rem;
+        a {
+
+        }
+        aside {
+            right: unset;
+            left: 0;
+            width: 25%;
+            max-width: 60rem;
         }
     }
     main {
