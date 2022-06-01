@@ -13,7 +13,6 @@
   "author": "Achim Galeski | achim.galeski@gmail.com",
   "license": "UNLISENCED",
   "devDependencies": {
-    "bootstrap": "^5.1.3",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.0.0",
