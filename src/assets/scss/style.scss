@@ -26,17 +26,20 @@ html, body {
     padding: 0;
     margin: 0;
     font-size: 20px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
-    scroll-behavior: smooth;
     font-family: 'Saira Extra Condensed', sans-serif;
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.4rem;
     display: flex;
+    overflow-y: auto;
 }
 h1 {
     font-size: 3.5rem;
+    line-height: .7;
     font-weight: bold;
     margin-bottom: 0;
     span {
@@ -65,28 +68,6 @@ img.profil {
 .text-uppercase {
     text-transform: uppercase;
 }
-/*
-nav {
-    top: 0;
-    background-color: $primary;
-    &.navbar {
-        position: fixed;
-        width: 100%;
-    }
-    .container {
-        padding: .5rem 1rem;
-    }
-}
-.navbar-collapse {
-    transition: height .3s ease-in-out;
-    padding-top: 1rem;
-}
-.navbar-brand {
-    img.profil {
-        display: none;
-    }
-}
- */
 nav {
     position: fixed;
     top: 0;
@@ -115,6 +96,7 @@ nav {
         height: 2rem;
         padding: .4rem;
         border: 1px solid $primary;
+        color: #fff;
         &:focus ~ aside,
         &:active ~ aside {
             right: 0;
@@ -138,11 +120,12 @@ nav {
         background-color: $primary;
         transition: right .3s ease-in-out;
         z-index: 100;
+        align-items: center;
         ul {
             list-style: none;
             width: 100%;
             padding: 0;
-            margin: 1rem 0 0 0;
+            margin: 0;
             li {
                 a {
                     display: block;
@@ -162,26 +145,34 @@ nav {
     }
 }
 main {
+    a {
+        color: #00f;
+        &:visited {
+            color: #00f;
+        }
+    }
     article {
-        padding: 4.5rem 1rem 0;
+        padding: 3rem 0;
         display: flex;
         align-items: center;
         border-bottom: 1px solid #ddd;
+        & > div {
+            padding: 0 1rem;
+            width: 100%;
+        }
     }
 }
 .social-icons {
     a {
-        width: 3rem;
         height: 3rem;
-        line-height: 3rem;
-        text-align: center;
         border-radius: 50%;
         background-color: #333;
         display: inline-block;
         margin-right: 1rem;
         svg {
-            max-height: 2rem;
-            max-width: 2rem;
+            height: 2rem;
+            width: 2rem;
+            margin: .5rem;
             color: #fff;
         }
     }
@@ -193,37 +184,39 @@ main {
 }
 #recommendations {
     figure {
-        //@extend .col-lg-10;
-        //@extend .offset-lg-1;
         text-align: center;
-        margin-bottom: 3rem;
+        margin: 0 0 3rem;
         &:last-child {
             margin-bottom: 0;
         }
         blockquote {
-            //@extend .blockquote;
             font-style: italic;
             line-height: 1.1rem;
+            margin: 0 1rem;
+            p {
+                margin: 0;
+            }
         }
         figcaption {
-            //@extend .blockquote-footer;
             line-height: 1.3rem;
             padding-top: .3rem;
+            color: $primary;
         }
     }
 }
 #experience {
     ul {
         list-style: disc outside;
-        margin-top: -1rem;
+        margin: -1rem 0 0;
+        padding: 0 0 0 1rem;
         li {
             position: relative;
             p {
                 &::before {
                     content: " ";
                     position: absolute;
-                    top: 1.8rem;
-                    left: -1.2rem;
+                    top: 1.6rem;
+                    left: -.95rem;
                     border-left: 1px solid #000;
                     height: calc(100% - .5rem);
                 }
@@ -250,13 +243,22 @@ main {
     h3, h4 {
         margin-bottom: 0;
     }
+    p {
+        margin-top: 0;
+    }
     & .description {
         margin-bottom: 0;
-        font-size: 1.2rem;
+        font-size: .9rem;
+    }
+    & .date {
+        font-size: .8rem;
+        color: #555;
     }
 }
 footer {
     padding: 1rem;
+    font-size: .8rem;
+    color: #555;
 }
 @media (min-width: 400px) {
     h1 {
@@ -267,46 +269,11 @@ footer {
     h1 {
         font-size: 5rem;
     }
-    /*
-    aside {
-        width: 25%;
-        max-width: 28rem;
-    }
-    nav {
-        &.navbar {
-            height: 100%;
-            width: 25%;
-            max-width: 28rem;
-            flex-wrap: wrap;
-            .navbar-nav {
-                flex-direction: column;
-                width: 100%;
-                .nav-link {
-                    text-align: center;
-                    &:hover {
-                        background-color: rgba(255,255,255,.3);
-                    }
-                }
-            }
-        }
-        .container {
-            padding: 0;
-        }
-    }
-    .navbar-brand {
-        width: 100%;
-        margin: 0;
-        img.profil {
-            width: 90%;
-            display: block;
-        }
-    }
-     */
     nav {
         position: relative;
         height: 100%;
         width: 25%;
-        max-width: 60rem;
+        max-width: 20rem;
         box-shadow: none;
         img.profil {
             display: block;
@@ -322,17 +289,23 @@ footer {
             top: 0;
             left: 0;
             width: 25%;
-            max-width: 60rem;
+            max-width: 20rem;
+            margin: 0;
             display: flex;
             align-items: center;
+            ul {
+                margin-top: 1rem;
+            }
         }
     }
     main {
         width: 75%;
-        max-width: 60rem;
         article {
-            padding: 4.5rem 2rem 0;
             min-height: 100vh;
+            & > div {
+                max-width: 40rem;
+                padding: 0 2rem;
+            }
         }
     }
     #about {
