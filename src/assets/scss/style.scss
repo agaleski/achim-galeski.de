@@ -16,12 +16,13 @@
 }
 
 $primary: #066;
+$primary-light: lighten($primary, 10%);
 
 * {
     box-sizing: border-box;
 }
 html, body {
-    width: 100vw;
+    width: 100%;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -35,8 +36,9 @@ body {
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.4rem;
-    height: auto;
     overflow-y: auto;
+    background-color: #121212;
+    color: #eee;
     & > div {
         display: flex;
         flex-flow: row nowrap;
@@ -50,11 +52,11 @@ h1 {
     font-weight: bold;
     margin-bottom: 0;
     span {
-        color: $primary;
+        color: $primary-light;
     }
 }
 h2 {
-    color: $primary;
+    color: $primary-light;
     font-weight: bold;
     margin-bottom: 3rem;
 }
@@ -66,7 +68,7 @@ a {
 }
 img.profil {
     border-radius: 50%;
-    border: .5rem solid rgba(255,255,255,.3);
+    border: .5rem solid rgba(0,0,0,.2);
     width: 100%;
     height: auto;
     max-width: 25rem;
@@ -81,8 +83,8 @@ nav {
     left: 0;
     width: 100vw;
     height: 3rem;
-    background-color: #fff;
-    box-shadow: 0 0 5px #333;
+    background-color: #eee;
+    box-shadow: 0 0 5px #999;
     z-index: 10;
     > div {
         line-height: 3rem;
@@ -102,7 +104,6 @@ nav {
         width: 2rem;
         height: 2rem;
         padding: .4rem;
-        //border: 1px solid $primary;
         background-color: $primary;
         &:focus ~ aside,
         &:active ~ aside {
@@ -112,7 +113,6 @@ nav {
             margin: .2rem auto;
             display: block;
             width: 1rem;
-            //background: $primary;
             background: #fff;
             height: .1rem;
             border-radius: .3rem;
@@ -122,9 +122,9 @@ nav {
         display: block;
         position: fixed;
         top: 3rem;
-        right: -50vw;
+        right: -60vw;
         height: 100vh;
-        width: 50vw;
+        width: 60vw;
         background-color: $primary;
         transition: right .3s ease-in-out;
         z-index: 100;
@@ -144,8 +144,8 @@ nav {
                     letter-spacing: .1rem;
                     color: #fff;
                     &:hover,
-                    &focus {
-                        background-color: rgba(255,255,255,.3)
+                    &.active {
+                        background-color: rgba(0,0,0,.3)
                     }
                 }
             }
@@ -164,7 +164,7 @@ main {
         padding: 3rem 0;
         display: flex;
         align-items: center;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid $primary;
         & > div {
             padding: 0 1rem;
             width: 100%;
@@ -173,6 +173,7 @@ main {
 }
 .social-icons {
     a {
+        filter: invert(1);
         height: 3rem;
         border-radius: 50%;
         background-color: #333;
@@ -185,6 +186,9 @@ main {
             color: #fff;
         }
     }
+}
+.print-only {
+    display: none;
 }
 #about {
     img.profil {
@@ -209,7 +213,7 @@ main {
         figcaption {
             line-height: 1.3rem;
             padding-top: .3rem;
-            color: $primary;
+            color: $primary-light;
         }
     }
 }
@@ -247,7 +251,7 @@ main {
         }
     }
     h4 {
-        color: $primary;
+        color: $primary-light;
     }
     h3, h4 {
         margin-bottom: 0;
@@ -261,13 +265,22 @@ main {
     }
     & .date {
         font-size: .8rem;
-        color: #555;
+        color: #aaa;
     }
 }
 footer {
     padding: 1rem;
     font-size: .8rem;
-    color: #555;
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    a {
+        text-decoration: underline;
+        color: #ccc;
+        &:visited {
+            color: #ccc;
+        }
+    }
 }
 @media (min-width: 400px) {
     h1 {
@@ -303,6 +316,12 @@ footer {
             justify-content: center;
             ul {
                 margin-top: 1rem;
+                //li:active,
+                //li:focus,
+                a:focus,
+                a:active {
+                    background-color: rgba(255,255,255,.3);
+                }
             }
         }
     }
@@ -322,5 +341,75 @@ footer {
     }
     footer {
         padding: 2rem;
+        text-align: left;
+    }
+}
+@media print {
+    * {
+        background-color: #fff;
+    }
+    body {
+        color: #000;
+    }
+    h1 {
+        span {
+            color: $primary;
+        }
+    }
+    h2 {
+        color: $primary;
+    }
+    nav {
+        box-shadow: none;
+        & > a {
+            display: none;
+        }
+        & > div {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    main {
+        article {
+            display: block;
+            min-height: 100vh;
+            border: none;
+            overflow: hidden;
+        }
+    }
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        padding: 1rem 0 0;
+        a {
+            display: none;
+        }
+    }
+    #about {
+        display: flex;
+    }
+    #recommendations {
+        figure {
+            max-width: 80%;
+            margin: 15% auto;
+            blockquote {
+                line-height: inherit;
+            }
+            figcaption {
+                color: $primary;
+            }
+        }
+    }
+    #experience {
+        h4 {
+            color: $primary;
+        }
+    }
+    .print-only {
+        display: initial;
+    }
+    .social-icons {
+        display: none;
     }
 }

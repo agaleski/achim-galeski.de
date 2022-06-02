@@ -70,17 +70,32 @@ const getTimeDifference = (start, end = null, showDates = false, lang = 'en') =>
  * @returns {void}
  */
 const setTimeStrings = () => {
-    const elements = document.getElementsByClassName('date');
-    const language = document.getElementsByTagName('html')[0].getAttribute('lang');
-
-    for (let i = 0; i < elements.length; i++) {
-        elements[i].innerHTML = getTimeDifference(
-            elements[i].getAttribute('data-start'),
-            elements[i].getAttribute('data-end'),
-            elements[i].getAttribute('data-show'),
-            language
-        );
-    }
+    document.querySelectorAll('.date')
+        .forEach((elem) => {
+            elem.innerHTML = getTimeDifference(
+                elem.getAttribute('data-start'),
+                elem.getAttribute('data-end'),
+                elem.getAttribute('data-show'),
+                document.querySelector('html').getAttribute('lang')
+            );
+        });
 }
 
+let menuLinks = document.querySelectorAll('aside ul a');
+let articles  = document.querySelectorAll('main article');
+
+/**
+ * Simple ScrollSpy implementation.
+ * Uses global, once par page load generated element lists for efficiency.
+ */
+window.onscroll = () => {
+    articles.forEach((article, i) => {
+        if (article.getBoundingClientRect().y < window.innerHeight - 500) {
+            menuLinks.forEach((a) => {
+                a.classList.remove('active');
+            })
+            return menuLinks[i].classList.add('active');
+        }
+    });
+}
 document.addEventListener("DOMContentLoaded", setTimeStrings);
