@@ -214,6 +214,7 @@ main {
             line-height: 1.3rem;
             padding-top: .3rem;
             color: $primary-light;
+            font-weight: bold;
         }
     }
 }
@@ -316,11 +317,13 @@ footer {
             justify-content: center;
             ul {
                 margin-top: 1rem;
-                //li:active,
-                //li:focus,
-                a:focus,
-                a:active {
-                    background-color: rgba(255,255,255,.3);
+                li {
+                    a {
+                        text-shadow: 2px 2px 0 #000;
+                        &:hover {
+                            background-color: rgba(255,255,255,.2);
+                        }
+                    }
                 }
             }
         }
@@ -367,6 +370,9 @@ footer {
         & > div {
             display: flex;
             justify-content: space-between;
+        }
+        aside {
+            display: none;
         }
     }
     main {

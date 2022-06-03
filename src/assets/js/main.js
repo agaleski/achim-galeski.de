@@ -90,7 +90,7 @@ let articles  = document.querySelectorAll('main article');
  */
 window.onscroll = () => {
     articles.forEach((article, i) => {
-        if (article.getBoundingClientRect().y < window.innerHeight - 500) {
+        if (article.getBoundingClientRect().y < window.innerHeight - (screen.height / 10 * 5)) {
             menuLinks.forEach((a) => {
                 a.classList.remove('active');
             })
