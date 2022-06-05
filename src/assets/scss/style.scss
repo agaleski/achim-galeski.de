@@ -59,12 +59,14 @@ h2 {
     color: $primary-light;
     font-weight: bold;
     margin-bottom: 3rem;
+    border-bottom: 1px solid $primary;
 }
 h1, h2 {
     text-transform: uppercase;
 }
-a {
-    text-decoration: none;
+ul {
+    list-style: none;
+    padding: 0;
 }
 img.profil {
     border-radius: 50%;
@@ -86,6 +88,9 @@ nav {
     background-color: #eee;
     box-shadow: 0 0 5px #999;
     z-index: 10;
+    a {
+        text-decoration: none;
+    }
     > div {
         line-height: 3rem;
         padding-left: 1rem;
@@ -130,9 +135,7 @@ nav {
         z-index: 100;
         align-items: center;
         ul {
-            list-style: none;
             width: 100%;
-            padding: 0;
             margin: 0;
             li {
                 a {
@@ -155,12 +158,12 @@ nav {
 main {
     flex: 3 1 75%;
     a {
-        color: #00f;
+        color: $primary-light;
         &:visited {
-            color: #00f;
+            color: $primary-light;
         }
     }
-    article {
+    section {
         padding: 3rem 0;
         display: flex;
         align-items: center;
@@ -269,6 +272,57 @@ main {
         color: #aaa;
     }
 }
+#skills {
+    .dev-icons {
+        display: flex;
+        flex-flow: row wrap;
+        li {
+            padding: 0 .5rem 1rem;
+            text-align: center;
+            width: 6rem;
+            svg {
+                display: block;
+                height: 2rem;
+                width: auto;
+                max-width: 2rem;
+                margin: 0 auto;
+            }
+        }
+    }
+    .list {
+        li {
+            //height: 2rem;
+            line-height: 2rem;
+            //padding-left: 1rem;
+            //position: relative;
+            /*
+            &::before {
+                content: "\01F3C6";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 2rem;
+                width: 1rem;
+                line-height: 2rem;
+                text-align: right;
+            }
+             */
+            a {
+                display: block;
+                //padding: 0 0 .5rem;
+            }
+        }
+    }
+    /*
+    .references {
+        li {
+            &::before {
+                content: "\01F5CE"
+            }
+        }
+    }
+     */
+}
 footer {
     padding: 1rem;
     font-size: .8rem;
@@ -329,7 +383,7 @@ footer {
         }
     }
     main {
-        article {
+        section {
             min-height: 100vh;
             & > div {
                 max-width: 40rem;
@@ -348,11 +402,12 @@ footer {
     }
 }
 @media print {
-    * {
-        background-color: #fff;
+    html {
+        font-size: 24px;
     }
     body {
         color: #000;
+        background-color: #fff;
     }
     h1 {
         span {
@@ -364,6 +419,7 @@ footer {
     }
     nav {
         box-shadow: none;
+        background-color: transparent;
         & > a {
             display: none;
         }
@@ -376,7 +432,7 @@ footer {
         }
     }
     main {
-        article {
+        section {
             display: block;
             min-height: 100vh;
             border: none;
@@ -388,6 +444,7 @@ footer {
         bottom: 0;
         width: 100vw;
         padding: 1rem 0 0;
+        background-color: transparent;
         a {
             display: none;
         }
@@ -410,6 +467,16 @@ footer {
     #experience {
         h4 {
             color: $primary;
+        }
+    }
+    #skills {
+        a {
+            display: inline-block !important;
+        }
+        span.print-only {
+            &::before {
+                content: " - ";
+            }
         }
     }
     .print-only {

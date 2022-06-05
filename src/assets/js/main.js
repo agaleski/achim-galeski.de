@@ -82,15 +82,15 @@ const setTimeStrings = () => {
 }
 
 let menuLinks = document.querySelectorAll('aside ul a');
-let articles  = document.querySelectorAll('main article');
+let sections  = document.querySelectorAll('main section');
 
 /**
  * Simple ScrollSpy implementation.
  * Uses global, once par page load generated element lists for efficiency.
  */
 window.onscroll = () => {
-    articles.forEach((article, i) => {
-        if (article.getBoundingClientRect().y < window.innerHeight - (screen.height / 10 * 5)) {
+    sections.forEach((section, i) => {
+        if (section.getBoundingClientRect().y < window.innerHeight - (screen.height / 10 * 5)) {
             menuLinks.forEach((a) => {
                 a.classList.remove('active');
             })

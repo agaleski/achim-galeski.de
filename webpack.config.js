@@ -54,6 +54,7 @@ module.exports = {
         { from: 'src/favicon.ico', to: "favicon.ico" },
         { from: 'src/assets/fonts', to: "assets/fonts" },
         { from: 'src/assets/img', to: "assets/img" },
+        { from: 'src/assets/files', to: "assets/files" },
       ],
     }),
     new HtmlWebpackPlugin({
