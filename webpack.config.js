@@ -17,6 +17,12 @@ module.exports = {
   },
   devServer: {
     static: './dist',
+    client: {
+      overlay: {
+        errors: true,
+        warnings: false,
+      },
+    },
   },
   module: {
     rules: [
