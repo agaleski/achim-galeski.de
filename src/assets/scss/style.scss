@@ -224,28 +224,7 @@ main {
 #experience {
     ul {
         list-style: disc outside;
-        margin: -1rem 0 0;
-        padding: 0 0 0 1rem;
-        li {
-            position: relative;
-            p {
-                &::before {
-                    content: " ";
-                    position: absolute;
-                    top: 1.6rem;
-                    left: -.95rem;
-                    border-left: 1px solid #000;
-                    height: calc(100% - .5rem);
-                }
-            }
-            &:last-child {
-                p {
-                    &::before {
-                        display: none;
-                    }
-                }
-            }
-        }
+        padding: 0 0 0 1.5rem;
     }
     h3 {
         font-weight: bold;
@@ -291,37 +270,13 @@ main {
     }
     .list {
         li {
-            //height: 2rem;
             line-height: 2rem;
-            //padding-left: 1rem;
-            //position: relative;
-            /*
-            &::before {
-                content: "\01F3C6";
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 2rem;
-                width: 1rem;
-                line-height: 2rem;
-                text-align: right;
-            }
-             */
             a {
-                display: block;
-                //padding: 0 0 .5rem;
+                display: inline-block;
+                min-width: 50%;
             }
         }
     }
-    /*
-    .references {
-        li {
-            &::before {
-                content: "\01F5CE"
-            }
-        }
-    }
-     */
 }
 footer {
     padding: 1rem;
@@ -342,7 +297,7 @@ footer {
         font-size: 4.5rem;
     }
 }
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
     h1 {
         font-size: 5rem;
     }
@@ -372,6 +327,13 @@ footer {
             ul {
                 margin-top: 1rem;
                 li {
+                    &.mobile-only {
+                        display: none !important;
+                        a {
+                            text-align: right;
+                            background: none;
+                        }
+                    }
                     a {
                         text-shadow: 2px 2px 0 #000;
                         &:hover {
@@ -403,7 +365,7 @@ footer {
 }
 @media print {
     html {
-        font-size: 24px;
+        font-size: 4mm;
     }
     body {
         color: #000;
@@ -418,36 +380,26 @@ footer {
         color: $primary;
     }
     nav {
-        box-shadow: none;
-        background-color: transparent;
-        & > a {
-            display: none;
-        }
-        & > div {
-            display: flex;
-            justify-content: space-between;
-        }
+        display: none;
         aside {
             display: none;
         }
     }
     main {
+        margin: 0;
+        padding: 0;
         section {
             display: block;
-            min-height: 100vh;
+            min-height: 270mm;
             border: none;
+            padding: 0;
+            margin: 0;
             overflow: hidden;
+            page-break-after: always;
         }
     }
     footer {
-        position: fixed;
-        bottom: 0;
-        width: 100vw;
-        padding: 1rem 0 0;
-        background-color: transparent;
-        a {
-            display: none;
-        }
+        display: none;
     }
     #about {
         display: flex;
@@ -455,7 +407,7 @@ footer {
     #recommendations {
         figure {
             max-width: 80%;
-            margin: 15% auto;
+            margin: 3rem auto;
             blockquote {
                 line-height: inherit;
             }
@@ -465,14 +417,15 @@ footer {
         }
     }
     #experience {
+        h3 {
+            margin-top: 1.5rem;
+        }
         h4 {
             color: $primary;
+            margin-top: .5rem;
         }
     }
     #skills {
-        a {
-            display: inline-block !important;
-        }
         span.print-only {
             &::before {
                 content: " - ";
