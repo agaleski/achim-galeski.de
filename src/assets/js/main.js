@@ -94,7 +94,7 @@ window.onscroll = () => {
             menuLinks.forEach((a) => {
                 a.classList.remove('active');
             })
-            return menuLinks[i].classList.add('active');
+            return menuLinks[i+1].classList.add('active');
         }
     });
 }

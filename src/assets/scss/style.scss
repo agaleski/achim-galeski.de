@@ -167,7 +167,6 @@ main {
         padding: 3rem 0;
         display: flex;
         align-items: center;
-        border-bottom: 1px solid $primary;
         & > div {
             padding: 0 1rem;
             width: 100%;
@@ -250,6 +249,17 @@ main {
         font-size: .8rem;
         color: #aaa;
     }
+}
+#projects {
+    h3 {
+        color: $primary-light;
+        margin-bottom: .5rem;
+    }
+    ul {
+        list-style: disc outside;
+        padding-left: 1.5rem;
+    }
+
 }
 #skills {
     .dev-icons {
@@ -347,6 +357,7 @@ footer {
     main {
         section {
             min-height: 100vh;
+            border-bottom: 1px solid $primary;
             & > div {
                 max-width: 40rem;
                 padding: 0 2rem;
@@ -409,6 +420,11 @@ footer {
             max-width: 80%;
             margin: 3rem auto;
             blockquote {
+                img {
+                    height: 1rem;
+                    width: 1rem;
+                    filter: invert(1);
+                }
                 line-height: inherit;
             }
             figcaption {
@@ -425,11 +441,19 @@ footer {
             margin-top: .5rem;
         }
     }
+    #projects {
+        h3 {
+            color: $primary;
+        }
+    }
     #skills {
         span.print-only {
             &::before {
                 content: " - ";
             }
+        }
+        a {
+            color: $primary;
         }
     }
     .print-only {
