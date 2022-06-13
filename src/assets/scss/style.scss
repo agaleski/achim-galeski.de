@@ -455,11 +455,19 @@ footer {
         a {
             color: $primary;
         }
+        .list {
+            li {
+                line-height: initial;
+            }
+        }
+    }
+    .social-icons {
+        display: none;
     }
     .print-only {
         display: initial;
     }
-    .social-icons {
-        display: none;
+    .page-break {
+        page-break-after: always;
     }
 }
