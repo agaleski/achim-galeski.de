@@ -4,7 +4,6 @@
   "description": "Achim Galeski - Online Curriculum Vitae",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
     "watch": "webpack --watch",
     "build": "webpack"
