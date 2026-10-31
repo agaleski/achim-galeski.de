@@ -1,11 +1,11 @@
 const path = require('path');
-const glob = require('glob');
+const { globSync } = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-const PurgeCSSPlugin = require('purgecss-webpack-plugin');
+const { PurgeCSSPlugin } = require('purgecss-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -53,7 +53,7 @@ module.exports = {
       filename: 'assets/css/style.min.css',
     }),
     new PurgeCSSPlugin({
-      paths: glob.sync(path.resolve(__dirname, 'src') + `/**/*`, { nodir: true }),
+      paths: globSync(path.resolve(__dirname, 'src') + `/**/*`, { nodir: true }),
     }),
     new CopyPlugin({
       patterns: [
@@ -62,6 +62,7 @@ module.exports = {
         { from: 'src/assets/img', to: "assets/img" },
         { from: 'src/assets/files', to: "assets/files" },
         { from: 'src/redirect', to: "redirect" },
+        { from: 'src/impressum', to: "impressum" },
       ],
     }),
     new HtmlWebpackPlugin({
