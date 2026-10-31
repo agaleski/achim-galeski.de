@@ -63,6 +63,7 @@ module.exports = {
         { from: 'src/assets/files', to: "assets/files" },
         { from: 'src/redirect', to: "redirect" },
         { from: 'src/impressum', to: "impressum" },
+        { from: 'src/datenschutz', to: "datenschutz" },
       ],
     }),
     new HtmlWebpackPlugin({
