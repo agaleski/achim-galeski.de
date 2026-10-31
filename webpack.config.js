@@ -14,6 +14,7 @@ module.exports = {
     filename: 'assets/js/bundle.min.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+    publicPath: '/',
   },
   devServer: {
     static: './dist',
@@ -58,6 +59,8 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: 'src/favicon.ico', to: "favicon.ico" },
+        { from: 'src/robots.txt', to: "robots.txt" },
+        { from: 'src/sitemap.xml', to: "sitemap.xml" },
         { from: 'src/assets/fonts', to: "assets/fonts" },
         { from: 'src/assets/img', to: "assets/img" },
         { from: 'src/assets/files', to: "assets/files" },
@@ -71,6 +74,13 @@ module.exports = {
       hash: true,
       minify: true,
       template: 'src/index.html',
+    }),
+    new HtmlWebpackPlugin({
+      inject: true,
+      hash: true,
+      minify: true,
+      template: 'src/de/index.html',
+      filename: 'de/index.html',
     }),
   ],
 };

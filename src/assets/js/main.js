@@ -9,7 +9,7 @@ const translations = {
         'today':  'today'
     },
     'de': {
-        'years':  [ 'Jahr ', ' Jahre ' ],
+        'years':  [ ' Jahr ', ' Jahre ' ],
         'months': [ 'Monat', ' Monate' ],
         'today':  'heute'
     }
@@ -53,8 +53,8 @@ const getTimeDifference = (start, end = null, showDates = false, lang = 'en') =>
     months = (months + 12 * years) % 12;
     /* Now build the result string. */
     if (showDates) {
-        result += startDate.toLocaleDateString() + ' - ';
-        result += end ? endDate.toLocaleDateString()  : translations[lang].today;
+        result += startDate.toLocaleDateString(lang) + ' - ';
+        result += end ? endDate.toLocaleDateString(lang) : translations[lang].today;
         result += ' | ';
     }
     result += years > 0 ? years + translations[lang].years[Number(years > 1)] : '';
